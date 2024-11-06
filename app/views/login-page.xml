@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="{{ 'login.title' | L }}" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="{{ 'login.title' | L }}" class="header" />
+            
+            <GridLayout rows="auto" columns="*, auto" class="mb-4">
+                <TextField col="0" hint="{{ 'login.email' | L }}" text="{{ email }}" 
+                    class="input-field" keyboardType="email" />
+                <Button col="1" text="🌐" tap="{{ onChangeLanguage }}" 
+                    class="ml-2 px-4 py-2 bg-gray-500 text-white rounded" />
+            </GridLayout>
+
+            <TextField hint="{{ 'login.password' | L }}" text="{{ password }}" 
+                secure="true" class="input-field" visibility="{{ isOtpLogin ? 'collapsed' : 'visible' }}" />
+            
+            <GridLayout rows="auto" columns="*,*" visibility="{{ isOtpLogin ? 'visible' : 'collapsed' }}"
+                class="mb-4">
+                <TextField col="0" hint="{{ 'login.enterOtp' | L }}" text="{{ otp }}" 
+                    keyboardType="number" class="input-field" />
+                <Button col="1" text="{{ 'login.resendOtp' | L }}" tap="{{ onResendOtp }}"
+                    class="ml-2 btn-secondary" />
+            </GridLayout>
+
+            <Button text="{{ isOtpLogin ? ('login.verifyOtp' | L) : ('login.loginButton' | L) }}" 
+                tap="{{ isOtpLogin ? onVerifyOtp : onLogin }}" class="btn-primary" />
+            
+            <Button text="{{ 'login.otpButton' | L }}" tap="{{ onToggleOtpLogin }}" 
+                class="btn-primary mt-2" />
+            
+            <Button text="{{ 'login.signupButton' | L }}" tap="{{ onSignUp }}" 
+                class="btn-primary mt-2" />
+            
+            <Button text="{{ 'login.biometricButton' | L }}" tap="{{ onBiometricLogin }}" 
+                class="btn-primary mt-4" />
+
+            <ActivityIndicator busy="{{ isLoading }}" class="mt-4" />
+        </StackLayout>
+    </ScrollView>
+</Page>

@@ -1,0 +1,27 @@
+{
+  "login": {
+    "title": "Supply Chain Login",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Login",
+    "signupButton": "Sign Up",
+    "biometricButton": "Use Biometrics",
+    "otpButton": "Login with OTP",
+    "enterOtp": "Enter OTP",
+    "verifyOtp": "Verify OTP",
+    "resendOtp": "Resend OTP"
+  },
+  "scan": {
+    "title": "Document Scanner",
+    "scanButton": "Scan Document",
+    "processButton": "Process Text",
+    "readButton": "Read Aloud",
+    "lotId": "Lot ID",
+    "batchNo": "Batch No"
+  },
+  "common": {
+    "error": "Error",
+    "success": "Success",
+    "loading": "Loading..."
+  }
+}

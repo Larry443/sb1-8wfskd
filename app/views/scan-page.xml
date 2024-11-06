@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Document Details" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Supply Chain Document" class="header" />
+            
+            <GridLayout rows="auto, auto" columns="*, *" class="form-group mb-4">
+                <Label text="Lot ID:" class="label" row="0" col="0" />
+                <TextField text="{{ lotId }}" hint="Enter Lot ID" 
+                    class="input-field" row="0" col="1" />
+                
+                <Label text="Batch No:" class="label" row="1" col="0" />
+                <TextField text="{{ batchNo }}" hint="Enter Batch No" 
+                    class="input-field" row="1" col="1" />
+            </GridLayout>
+
+            <Button text="Process Document" tap="{{ onProcessDocument }}" 
+                class="btn-primary mb-4" />
+            
+            <Label text="{{ status }}" textWrap="true" 
+                class="status-message" />
+            
+            <Button text="Send to Blockchain" tap="{{ onSendToBlockchain }}" 
+                class="btn-primary mt-4" isEnabled="{{ canSendToBlockchain }}" />
+            
+            <Button text="Validate Contract" tap="{{ onValidateContract }}" 
+                class="btn-secondary mt-2" isEnabled="{{ canValidate }}" />
+        </StackLayout>
+    </ScrollView>
+</Page>

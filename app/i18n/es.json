@@ -1,0 +1,27 @@
+{
+  "login": {
+    "title": "Inicio de Sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "loginButton": "Iniciar Sesión",
+    "signupButton": "Registrarse",
+    "biometricButton": "Usar Biometría",
+    "otpButton": "Iniciar con OTP",
+    "enterOtp": "Ingrese OTP",
+    "verifyOtp": "Verificar OTP",
+    "resendOtp": "Reenviar OTP"
+  },
+  "scan": {
+    "title": "Escáner de Documentos",
+    "scanButton": "Escanear Documento",
+    "processButton": "Procesar Texto",
+    "readButton": "Leer en Voz Alta",
+    "lotId": "ID de Lote",
+    "batchNo": "Número de Lote"
+  },
+  "common": {
+    "error": "Error",
+    "success": "Éxito",
+    "loading": "Cargando..."
+  }
+}
